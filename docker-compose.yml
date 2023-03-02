@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  app:
+    container_name: brokerapp
+    image: brokerapp
+    networks:
+      - my-network
+    build: ./
+    ports:
+      - "8080:8080"
+
+networks:
+  my-network:
+    driver: bridge
